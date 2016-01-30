@@ -151,6 +151,10 @@
     {{ parent() }}
 
     <script type="text/javascript">
+
+
+        console.log({{ model|json_encode|raw }});
+
         jQuery(function($) {
             $('#payment-form').submit(function(e) {
                 var $form = $(this);
