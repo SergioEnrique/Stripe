@@ -98,24 +98,24 @@
                                     <table style="margin-left: auto; margin-right: auto; text-align: right; width:100%">
                                         <tr>
                                             <td style="font-weight:bold">Origen:</td>
-                                            <td>Puebla</td>
+                                            <td>{{model.metadata.origen}}</td>
                                         </tr>
                                         <tr>
                                             <td style="font-weight:bold">Destino:</td>
-                                            <td>Mexico D.F.</td>
+                                            <td>{{model.metadata.destino}}</td>
                                         </tr>
                                         <tr>
                                             <td style="font-weight:bold">Fecha:</td>
-                                            <td>05-11-15</td>
+                                            <td>{{model.metadata.fecha}}</td>
                                         </tr>
                                         <tr>
                                             <td style="font-weight:bold">Paquetes:</td>
-                                            <td>3</td>
+                                            <td>model.metadata.paquetes</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="envioTotal">
-                                    <p><strong>Total:</strong><span style="font-size:20px; font-weight:bold;"> $125.00</span><span> MXN</span></p>
+                                    <p><strong>Total:</strong><span style="font-size:20px; font-weight:bold;"> ${{model.metadata.total}}</span><span> {{model.currency}}</span></p>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
     <script type="text/javascript">
 
 
-        console.log({{ model|json_encode|raw }});
+        console.log({{ model.metadata|json_encode|raw }});
 
         jQuery(function($) {
             $('#payment-form').submit(function(e) {
