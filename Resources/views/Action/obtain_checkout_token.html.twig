@@ -2,8 +2,8 @@
 
 {% block payum_body %}
     {{ parent() }}
-
-    <form action="{{ actionUrl|default('') }}" method="POST">
+    prueba checkout token
+    <form action="" method="POST">
         <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="{{ publishable_key }}"
